@@ -16,6 +16,16 @@ git <command> --help
 Create a `.git` subfolder. If delete it or modify files inside by hand, you could get into trouble.
 
 ##### Adding a file: git add
+```sh
+git add --all(-A)
+git add *.txt
+
+# Ignore some files and folders by default
+.gitignore
+
+# Add a file in the .gitignore file even if it is marked to be ignored
+git add -f(--force)
+```
 
 The `git add` command tells Git that we want it to take care of that file and check it for future modifications.
 
@@ -61,4 +71,27 @@ git rm --cached <file or folder>
 git reset
 git rm
 
+```sh
 git log
+git log --graph --decorate --pretty=online --abbrev-commit
+git config --global alias.tree 'log --graph --decorate --pretty=onelinw --abbrev-commit'
+```
+
+##### Highlighting an important commit -- Git tags
+Mark a commit with a tag to place a milestone in our repository.
+```sh
+git tag -a <tag name>
+git tag -a MyTagName -m "This is tienne's first tag :)"
+```
+
+##### Looking at the current branches
+```sh
+git branch
+# Creat a new branch
+git branch TienneNewBranch
+# Switching from branch to branch
+git checkout TienneNewBranch
+
+```
+
+
