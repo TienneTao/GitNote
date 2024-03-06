@@ -73,8 +73,6 @@ git rm
 
 ```sh
 git log
-git log --graph --decorate --pretty=online --abbrev-commit
-git config --global alias.tree 'log --graph --decorate --pretty=onelinw --abbrev-commit'
 ```
 
 ##### Highlighting an important commit -- Git tags
@@ -93,5 +91,3 @@ git branch TienneNewBranch
 git checkout TienneNewBranch
 
 ```
-
-
